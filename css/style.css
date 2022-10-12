@@ -19,6 +19,7 @@
 
 body{
     height: 100vh;
+    background-color: grey;
 }
 
 .container{
@@ -29,8 +30,85 @@ body{
     height: 25%;
 }
 
-#snack1{
+.d-none{
+    opacity: 0;;
+}
+
+/* GENERAL */
+
+.float-left{
+    float: left;
+}
+
+.snack-left{
+    width: 20%;
+    height: 100%;
+    position: relative;
+}
+
+.snack-left i{
+    font-size: 4rem;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+
+.snack-left i:hover{
+    font-size: 4.5rem;
+}
+
+.snack-right{
+    width: 80%;
+    height: 100%;
+}
+
+
+
+/* SNACK 1 */
+#snack1 .snack-left{
     background-color: var(--lighter-blue);
+}
+
+#snack1 .snack-right{
+    background-color: var(--lighter-blue);
+}
+
+#snack1 .snack-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#snack1 .snack-right input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    margin: 20px 0;
+    height: 40px;
+    width: 150px;
+    text-align: center;
+    font-size: 2rem;
+    outline: none;
+    color: white;
+}
+
+#snack1 .snack-right button{
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+#snack1 .snack-right .result1{
+    display: inline-block;
+}
+
+#snack1 .snack-right .result1 i{
+    margin: 0 5px;
 }
 
 .snack-description{
@@ -39,31 +117,115 @@ body{
     text-align: center;
     color: palevioletred;
 }
-
-#snack2{
+/* SNACK 2 */
+#snack2 .snack-left{
     background-color: var(--light-blue);
 }
 
-#snack3{
+#snack2 .snack-right{
+    background-color: var(--light-blue);
+}
+
+/* SNACK 3 */
+#snack3 .snack-left{
     background-color: var(--dark-blue);
 }
 
-#snack4{
+#snack3 .snack-right{
+    background-color: var(--dark-blue);
+}
+
+#snack3 .snack-right input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    margin: 20px 0;
+    height: 40px;
+    width: 150px;
+    text-align: center;
+    font-size: 2rem;
+    outline: none;
+    color: white;
+    margin: 40px
+}
+
+#snack3 .snack-right button{
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+#snack3 .snack-right .result3{
+    display: inline-block;
+    color: white;
+    margin: 0 50px;
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+
+#snack3 .snack-right .result3 div{
+    font-size: 1rem;
+}
+
+/* SNACK 4 */
+#snack4 .snack-left{
     background-color: var(--darker-blue);
+    color: white;
 }
 
-.float-left{
-    float: left;
+#snack4 .snack-right{
+    background-color: var(--darker-blue);
+    color: white;
 }
 
-.snack-left{
-    width: 20%;
-    border: 1px solid black;
-    height: 100%;
+#snack4 .array1{
+    width: 100px;
+    display: inline-block;
 }
 
-.snack-right{
-    width: 80%;
-    border: 1px solid red;
-    height: 100%;
+#snack4 .array2{
+    width: 100px;
+    display: inline-block;
+}
+
+#snack4 .results{
+    float: right;
+    width: 70%;
+    height: 60%;
+}
+
+#snack4 .results > *{
+    width: 100%;
+    padding: 2px;
+    border-bottom: 1px solid white;
+    margin: 10px 0;
+}
+
+#snack4 .results > * > *{
+    margin-left: 10px;
+}
+
+#snack4 .snack-right input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    color: white;
+    margin: 20px 0;
+    height: 40px;
+    width: 50px;
+    text-align: center;
+    font-size: 2rem;
+    outline: none;
+    margin: 40px
+}
+
+#snack4 .snack-right button{
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    margin-left: 60px;
 }
