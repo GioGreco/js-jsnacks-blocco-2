@@ -41,7 +41,34 @@ function printEven(){
 btn1.addEventListener('click', printEven);
 
 //snack 2 : Generatore di “nomi cognomi” casuali: il Grande Gatsby ha  una lista di nomi e una lista di cognomi, e da queste vuole generare una falsa lista di invitati con nome e cognome.
+const names = ['Giorgio', 'Piero', 'Lorenzo', 'Alberto', 'Alessia', 'Francesca', 'Enrica', 'Federica', 'Uccio', 'Daniele', 'Deborah', 'Paolo', 'Max', 'Maurizio', 'Veronica', 'Leonardo', 'Valeria', 'Bianca', 'Guglielmo', 'Alice'];
+const surnames = ['Greco', 'Pelù', 'Totti', 'Balsamo', 'Rossi', 'Donato', 'Ricci', 'Zaza', 'De Sciglio', 'Gabbia', 'Camoranesi', 'Mancini', 'Baschirotto', 'Bandinelli', 'Hysaj', 'Muhammad', 'Donadoni', 'Mortazza', 'Pellegri', 'Milinkovic-Savic'];
+const totGuests = 20;
+const inviteList = [];
 
+const btn2 = document.createElement('button');
+exs[1].append(btn2);
+btn2.innerText = 'GENERA LISTA INVITATI';
+
+const leo = document.querySelectorAll('img');
+console.log(leo);
+
+function generateList(){
+        leo[0].classList.toggle('d-none');
+        leo[1].classList.toggle('d-none');
+        const guests = document.querySelectorAll('.guest');
+        console.log(guests);
+        for(let i = 0; i < totGuests; i++){
+            let randomName = Math.floor(Math.random()*names.length);
+            let randomSurname = Math.floor(Math.random()*surnames.length);
+            inviteList.push(names.splice(randomName, 1)+' '+surnames.splice(randomSurname, 1));
+        }
+        for(let p = 0; p < guests.length; p++){
+            guests[p].innerHTML = `${inviteList[p]}`;
+        }
+    }
+
+btn2.addEventListener('click', generateList);
 
 //snack 3 : Crea un array di numeri interi e fai la somma di tutti gli elementi  che sono in posizione dispari
 const genArray = document.createElement('input');
@@ -105,11 +132,16 @@ function equalize(){
     originalArray2.innerHTML = `ARRAY 2:`;
     finalArray1.innerHTML = `NUOVO ARRAY 1:`;
     finalArray2.innerHTML = `NUOVO ARRAY 2:`;
-    for(let w = 0; w < arrayLength1; w++){
-        array1.push(Math.floor(Math.random()*101));
-    };
-    for(let z = 0; z < arrayLength2; z++){
-        array2.push(Math.floor(Math.random()*101));
+    if(isNaN(arrayLength1) || isNaN(arrayLength2)){
+        alert('Devi inserire un numero!');
+    }
+    else{
+        for(let w = 0; w < arrayLength1; w++){
+            array1.push(Math.floor(Math.random()*101));
+        };
+        for(let z = 0; z < arrayLength2; z++){
+            array2.push(Math.floor(Math.random()*101));
+        }
     }
     //stampo originali
     for(let f = 0; f < array1.length; f++){
