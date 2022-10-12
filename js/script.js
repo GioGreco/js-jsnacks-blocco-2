@@ -48,7 +48,7 @@ const inviteList = [];
 
 const btn2 = document.createElement('button');
 exs[1].append(btn2);
-btn2.innerText = 'GENERA LISTA INVITATI';
+btn2.innerHTML = `GENERA<br>LISTA<br>INVITATI`;
 
 const leo = document.querySelectorAll('img');
 console.log(leo);

@@ -129,7 +129,7 @@ body{
 
 #snack2 .snack-right img{
     position: absolute;
-    left: 50px;
+    left: 2%;
     bottom: 0;
     height: 75%;
 }
@@ -142,14 +142,15 @@ body{
     color: white;
     position: absolute;
     top: 50%;
-    left: 300px;
+    left: 20%;
 }
 
 #snack2 .snack-right .guest-list{
     border: 1px solid white;
     width: 65%;
     float: right;
-    height: 70%;
+    height: 60%;
+    font-size: .82rem;
     display: flex;
     flex-flow: row wrap;
     align-content: space-around;
@@ -232,7 +233,7 @@ body{
 #snack4 .results{
     float: right;
     width: 70%;
-    height: 60%;
+    height: 55%;
     padding: 0 15px;
 }
 
@@ -240,7 +241,7 @@ body{
     width: 100%;
     padding: 2px;
     border-bottom: 1px solid white;
-    margin: 10px 0;
+    margin: 3px 0;
 }
 
 #snack4 .results > * > *{
@@ -252,13 +253,12 @@ body{
     border: none;
     border-bottom: 2px solid white;
     color: white;
-    margin: 20px 0;
+    margin: 20px 30px;
     height: 40px;
     width: 50px;
     text-align: center;
     font-size: 2rem;
     outline: none;
-    margin: 40px
 }
 
 #snack4 .snack-right button{
@@ -267,5 +267,5 @@ body{
     padding: 10px;
     cursor: pointer;
     color: white;
-    margin-left: 60px;
+    margin-left: 30px;
 }
