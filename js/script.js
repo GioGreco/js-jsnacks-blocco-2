@@ -33,4 +33,37 @@ btn1.addEventListener('click', printEven);
 
 //snack 2 : Generatore di “nomi cognomi” casuali: il Grande Gatsby ha  una lista di nomi e una lista di cognomi, e da queste vuole generare una falsa lista di invitati con nome e cognome.
 //snack 3 : Crea un array di numeri interi e fai la somma di tutti gli elementi  che sono in posizione dispari
+const genArray = document.createElement('input');
+exs[2].append(genArray);
+genArray.type = 'text';
+
+const btn3 = document.createElement('button');
+exs[2].append(btn3);
+btn3.innerText = 'SOMMA DISPARI'
+
+const result3 = document.createElement('div');
+exs[2].append(result3);
+result3.className = 'result3'
+
+function sumOdd(){
+    let value3 = parseInt(genArray.value);
+    let fullArray = [];
+    let somma = 0;
+    if(isNaN(value3)){
+        alert('Devi inserire un numero!');
+    }
+    else{
+        for(let i = 0; i < value3; i++){
+            fullArray.push(Math.floor(Math.random()*101));
+            if(i % 2 == 0){
+                somma += fullArray[i];
+            }
+        }
+        result3.innerHTML = `La somma degli elementi in <u>posizione dispari</u> della tua lista casuale &eacute; pari a = ${somma}`
+        console.log(fullArray);
+        console.log(somma);
+    }
+}
+
+btn3.addEventListener('click', sumOdd);
 //snack 4 : Crea due array che hanno un numero di elementi diversi.  Aggiungi elementi all’array che ha meno elementi fino a quando ne avrà tanti quanti l’altro.
