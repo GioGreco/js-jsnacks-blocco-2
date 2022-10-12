@@ -101,6 +101,10 @@ function equalize(){
     const originalArray2 = document.querySelector('.array2-items');
     const finalArray1 = document.querySelector('.new-array1');
     const finalArray2 = document.querySelector('.new-array2');
+    originalArray1.innerHTML = `ARRAY 1:`;
+    originalArray2.innerHTML = `ARRAY 2:`;
+    finalArray1.innerHTML = `NUOVO ARRAY 1:`;
+    finalArray2.innerHTML = `NUOVO ARRAY 2:`;
     for(let w = 0; w < arrayLength1; w++){
         array1.push(Math.floor(Math.random()*101));
     };
