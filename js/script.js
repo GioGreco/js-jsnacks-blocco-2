@@ -67,3 +67,52 @@ function sumOdd(){
 
 btn3.addEventListener('click', sumOdd);
 //snack 4 : Crea due array che hanno un numero di elementi diversi.  Aggiungi elementi all’array che ha meno elementi fino a quando ne avrà tanti quanti l’altro.
+const input1 = exs[3].querySelector('.array1');
+const val1 = document.createElement('input');
+input1.append(val1);
+val1.type = 'text';
+
+const input2 = exs[3].querySelector('.array2');
+const val2 = document.createElement('input');
+input2.append(val2);
+val2.type = 'text';
+
+const btn4 = document.createElement('button');
+exs[3].append(btn4);
+btn4.innerText = 'EGUAGLIA LUNGHEZZA'
+
+const result4 = document.createElement('div');
+exs[3].append(result4);
+result4.className = 'result4';
+
+function equalize(){
+    let arrayLength1 = parseInt(val1.value);
+    let arrayLength2 = parseInt(val2.value);
+    let array1 = [];
+    let array2 = [];
+    for(let w = 0; w < arrayLength1; w++){
+        array1.push(Math.floor(Math.random()*101));
+    };
+    for(let z = 0; z < arrayLength2; z++){
+        array2.push(Math.floor(Math.random()*101));
+    }
+    console.log(array1, array2);
+    if(array1.length > array2.length){
+        do{
+            array2.push(array1.pop());
+        }
+        while(array1.length > array2.length);
+    }
+    else if(array1.length < array2.length){
+        do{
+            array1.push(array2.pop());
+        }
+        while(array1.length < array2.length);
+    }
+    else{
+        result4.innerHTML = `I due array sono già della stessa lunghezza!`
+    }
+    console.log(array1, array2);
+}
+
+btn4.addEventListener('click', equalize);
